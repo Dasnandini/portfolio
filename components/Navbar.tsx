@@ -1,6 +1,8 @@
 
 "use client";
 import Link from "next/link";
+import logo from '@/assets/logo.png'
+import Image from "next/image";
 export default function Navbar() {
   const navItems = [
     { label: "About", href: "/about" },
@@ -12,6 +14,8 @@ export default function Navbar() {
     <nav className="w-full px-[5%] flex justify-between items-center p-4 bg-background">
          <div className="[font-family:var(--font-amelaryas)] text-[20px] font-black">
           <Link href="/" className="group relative inline-flex items-center cursor-pointer ">
+          {/* <Image src={logo} alt="logo" className=" h-8 w-8 inline-block transition-all duration-300 ease-[cubic-bezier(0.76,0,0.24,1)] translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 mr-2" /> */}
+
             <span >Nandini</span>
             <span className="inline-block transition-all duration-300 ease-[cubic-bezier(0.76,0,0.24,1)] translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 ml-2">
               das
