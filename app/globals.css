@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5cb5c;
+  --foreground: #cfdbd5;
+  --font-geist-sans: "Geist Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-geist-mono: "Geist Mono", SF Mono, SF Mono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-sm: 14px;
+  --color-primary: #e8eddf;
+  --color-secondary: #cfdbd5;
+  --color-theme: #4f5255;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-size-base: var(--font-size-base);
+  --font-size-lg: var(--font-size-lg);
+  --font-size-sm: var(--font-size-sm);
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-theme: var(--color-theme);
+}
+
+@font-face {
+  font-family: "BrittanySignature";
+  src: url("/fonts/BrittanySignature.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "MontrealSerial";
+  src: url("/fonts/Montreal-Serial Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Amelaryas";
+  src: url("/fonts/amelaryas.personal-use.otf") format("opentype");
+}
+
+body {
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes orbit-progress {
+  to {
+    offset-distance: 100%;
+  }
+}
+
+.orbit-skill {
+  offset-anchor: center;
+  offset-distance: 0%;
+  offset-position: 0 0;
+  offset-path: path("M42 394 C122 504 368 468 520 302 C664 146 558 30 370 44 C178 58 -28 210 20 338 C26 358 30 378 42 394Z");
+  offset-rotate: 0deg;
+  animation: orbit-progress 24s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit-skill {
+    animation: none;
+  }
+}
+
+html,
+body,
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none;
+}
+
+@theme {
+  --font-signature: "BrittanySignature", cursive;
+  --font-montreal: "MontrealSerial";
+  --font-amelaryas: "Amelaryas"
+}
+
+
